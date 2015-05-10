@@ -72,34 +72,34 @@ inc(41)
 val xs = Vector(5, 6, 8, 7)   //or List or Set
 
 //map inc over all elements and make a new Vector
-val ys = xs.map(inc)
+xs.map(inc)
+
+//map function literal - a function without a name
+xs.map(i => i + 1)
+
+//function literals with only one parameter used only once can be abbreviated
+xs.map(_ + 1)
 
 //collect some specific elements in a new vector
-val zs = xs.collect{ case x if x > 6 => x }
+xs.collect{ case x if x > 6 => x }
 
 //for loop
 for (i <- 0 to 2) { println(xs(i)) }
 for (i <- 0 until xs.size) { println(xs(i)) }
 
 //for comprehension
-val xsPlus1 = for (i <- 0 to 2) yield xs(i) + 1
+for (i <- 0 to 2) yield xs(i) + 1
 
 //creating a range (a collection of consecutive integers)
 (0 to 2)
 (0 until 3)
 
-//executing a function for each element in a collection using a function literal
-(0 to 2).foreach(i => println(i))
-xs.foreach(i => println(i))
-(0 to 2).foreach(i => println(xs(i))
+//alternative to for loop and for comprehension
+xs.foreach(println)
+(0 to 2).map(i => xs(i) + 1)
+(0 to 2).map(xs(_) + 1)
 
-//take the first 3 and print - safer as it does not break if less than 3
-xs.take(3).foreach(i => println(i))
-
-//shorter but expanded to the code above
-xs.take(3).foreach(println(_))
-
-//even shorter 
+//take is safer as it does not break if out of bounds
 xs.take(3).foreach(println)
 
 //while loop
@@ -126,7 +126,7 @@ inc2(41)  //the complier injects the .apply method call
 41.+(1)  //41 is an object
 inc2 apply 41  //operator notation on object inc2
 
-//declare a class with a primary constructor
+//declare a class with a primary constructor with class parameter
 class Banana(gram: Int) {
   val color = "yellow"       //an immutable attribute
   var pricePerKilo = 10      //a mutable attribute
@@ -137,10 +137,10 @@ class Banana(gram: Int) {
 //create an object and define a name that refers to that object:
 val b1 = new Banana(420)
 
-//Gram is private
+//class parameter gram is private
 b1.gram //Compile error:value gram is not a member of Banana
 
-//Members are public by default
+//members are public by default
 b1.kilo 
 b1.pricePerKilo = 20
 
@@ -150,13 +150,13 @@ trait Fruit {
   def kilo: Double = gram / 1000.0  //trait members can be concrete
 }
 
-//inherit from Fruit (val before class parameters to make it public)
+//inherit from Fruit (val before class parameters makes it public)
 class Banana(val gram: Int) extends Fruit 
 val b2 = new Banana(399)
 b2.gram
 b2.kilo
 
-//Create a companion object with an apply factory method using :paste in REPL
+//create a companion object with an apply factory method using :paste in REPL
 class Banana(val gram: Int) extends Fruit {
   override def toString = s"Banana($kilo) // in kilograms"
 }
@@ -189,6 +189,7 @@ case class Apple(val gram: Int) extends Fruit {
 }
 Apple(111) + Orange(222)
 
+//implicit classes add new methods to exiting types
 implicit class StringPimper(s: String) {
   def toCoolString = s + " is cool!"
 }  
