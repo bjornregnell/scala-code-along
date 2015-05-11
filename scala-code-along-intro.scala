@@ -1,4 +1,4 @@
-//------- A Scala code-along quick init
+//------- A Scala code-along quick introduction
 
 /* Preparations:
   * Download latest Scala: http://scala-lang.org/download/
@@ -21,11 +21,32 @@
   * There are many useful Scala libs and frameworks: Play, Akka, Scalatra, Lift, ..
 */   
 
-//every value is an object (no special "primitive types" as in Java)
+//hello world in the REPL (Read Evaluate Print Loop)
+println("hello world")
+
+//a separately compiled application in file hello.scala: compile with scalac hello.scala 
+object Hello extends App {
+  println("hello world")
+}
+
+//you can also do it the more verbose java-similar way if you want
+object Hello {
+  def main(args: Array[String]): Unit = {
+    println("hello world")
+  }
+}
+
+//Scala is more regular; all values are objects (no special "primitive types" as in Java)
 1.toString
 (3.14).toInt
 "3.14".toDouble
 
+//java strings are pimped with methods available in most collections such as split, reverse and take
+val s = "eil a si ekac ehT".reverse  
+s.split(" ").foreach(println)
+val word = "Narwahl"
+println(word.take(2) * 10 + " Batman!")
+ 
 //variable definition (type annotation with type name after colon)
 var x: Int = 0  //corresponding Java:  int x = 0;
 
@@ -38,7 +59,7 @@ x += 1
 x -= 10
 println(x)
 
-//value definition (a name referring to an assign-only-once variable)
+//value definition (a name referring to an assign-once variable)
 val k = 20
 k = k + 1 //Compile error:reassignment to val
 
@@ -68,8 +89,32 @@ def inc(x: Int) = x + 1
 //function application, "calling" a function
 inc(41)
 
-//create a Vector
-val xs = Vector(5, 6, 8, 7)   //or List or Set
+
+//iterative Fibonacci
+def fibbo(n: Int) = {
+  var i = 1
+  var j = 0
+  for (k <- 1 to n) {
+    var tmp = i
+    i += j
+    j = tmp
+  } 
+  i
+}
+
+//recursive Fibonacci 
+def fib(n: Int): Int = if (n < 2) 1 else fib(n - 1) + fib(n -2)
+
+//create immutable collections
+val xs = Vector(5, 6, 8, 7)   
+val primes = Set(17, 3, 5, 13, 7, 11, 3)
+val sortedPrimes = primes.toVector.sorted
+val capitol = Map("Sweden" -> "Stockholm", "Denmark" -> "Copenhagen", "Skåne" -> "Malmö")
+
+//create a variable reference to an immutable collection
+var ourList = List("rainbow")
+ourlist = ourlist + "rainbow"
+if (ourList(0) == ourList(1) && ourList(0) == "rainbow") println("Double rainbow")
 
 //map inc over all elements and make a new Vector
 xs.map(inc)
@@ -194,3 +239,5 @@ implicit class StringPimper(s: String) {
   def toCoolString = s + " is cool!"
 }  
 "Scala".toCoolString
+
+
