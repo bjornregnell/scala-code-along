@@ -14,12 +14,17 @@ by typing/pasting code snippets into the Scala interactive shell, also known as 
 
 ## Scala download mirrors at cs.lth.se
 
-  * [Scala 2.11.6 Windows msi](http://fileadmin.cs.lth.se/scala/scala-2.11.6.msi) 110MB
-  * [Scala 2.11.6 Unix/MacOSX tgz](http://fileadmin.cs.lth.se/scala/scala-2.11.6.tgz) 27MB
-  * [Scala 2.11.6 Linux/Debian deb](http://fileadmin.cs.lth.se/scala/scala-2.11.6.deb) 78MB
-  * [Kojo 2.4.06 Windows exe](http://fileadmin.cs.lth.se/scala/KojoInstall-2.4.06.exe)  18MB
-  * [Kojo 2.4.06 MacOSX dmg](http://fileadmin.cs.lth.se/kojo/Kojo-2.4.06.app.dmg) 39MB
-  * [Part of "Scala for the impatient"] (http://fileadmin.cs.lth.se/scala/scala-impatient.pdf) 6MB, first 110 pages Copyright Cay S. Horstmann 2012.  
+  * Scala command line tools (`scala`, `scalac`, `scaladoc`, etc) 
+    * [Scala 2.11.6 Windows msi](http://fileadmin.cs.lth.se/scala/scala-2.11.6.msi) 110MB
+    * [Scala 2.11.6 Unix/MacOSX tgz](http://fileadmin.cs.lth.se/scala/scala-2.11.6.tgz) 27MB
+    * [Scala 2.11.6 Linux/Debian deb](http://fileadmin.cs.lth.se/scala/scala-2.11.6.deb) 78MB
+
+  * Kojo IDE for easy scripting with api for 2D graphics and simple game dev     
+    * [Kojo 2.4.06 Windows exe](http://fileadmin.cs.lth.se/scala/KojoInstall-2.4.06.exe)  18MB
+    * [Kojo 2.4.06 MacOSX dmg](http://fileadmin.cs.lth.se/kojo/Kojo-2.4.06.app.dmg) 39MB
+
+  * Recommended reading for java programmers:
+    * [Part of "Scala for the impatient"] (http://fileadmin.cs.lth.se/scala/scala-impatient.pdf) 6MB, first 110 pages Copyright [Cay S. Horstmann 2012](http://www.horstmann.com/scala/index.html).  
   
 ## What is Scala?
 
