@@ -20,7 +20,7 @@ by typing/pasting code snippets into the Scala interactive shell, also known as 
     * [Scala 2.11.6 Linux/Debian deb](http://fileadmin.cs.lth.se/scala/scala-2.11.6.deb) 78MB
 
   * Kojo IDE for easy scripting with api for 2D graphics and simple game dev     
-    * [Kojo 2.4.06 Windows exe](http://fileadmin.cs.lth.se/scala/KojoInstall-2.4.06.exe)  18MB
+    * [Kojo 2.4.06 Windows exe](http://fileadmin.cs.lth.se/kojo/KojoInstall-2.4.06.exe)  18MB
     * [Kojo 2.4.06 MacOSX dmg](http://fileadmin.cs.lth.se/kojo/Kojo-2.4.06.app.dmg) 39MB
     * [Kojo 2.4.06 Linux/Unix jar](http://fileadmin.cs.lth.se/kojo/Kojo-2.4.06.jar) 18MB
     
