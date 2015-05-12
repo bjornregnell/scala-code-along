@@ -2,8 +2,15 @@
 
 A short intro to [Scala](http://scala-lang.org/). 
 
-We [Code-along](https://github.com/bjornregnell/scala-code-along/blob/master/scala-code-along-intro.scala) step-by-step
+The provided code is ment as inspiration for interactive live coding sessions lead by someone who wants to share the joy of Scala. We [code-along](https://github.com/bjornregnell/scala-code-along/blob/master/scala-code-along-intro.scala) together step-by-step
 by typing/pasting code snippets into the Scala interactive shell, also known as the Scala [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
+
+## Preparations before coding along:
+
+  * Download latest Scala using http://scala-lang.org/download/ or mirrors provided [below](https://github.com/bjornregnell/scala-code-along#scala-download-mirrors-at-cslthse) by LTH in Lund, Sweden.
+  * Open a terminal window (bash | powershell | cmd)
+  * Run the `scala` command
+  * Type or paste these [code snippets](https://github.com/bjornregnell/scala-code-along/blob/master/scala-code-along-intro.scala) line by line as we code along together 
 
 ## Scala download mirrors at cs.lth.se
 
@@ -12,15 +19,8 @@ by typing/pasting code snippets into the Scala interactive shell, also known as 
   * [Scala 2.11.6 Linux/Debian deb](http://fileadmin.cs.lth.se/scala/scala-2.11.6.deb) 78MB
   * [Kojo 2.4.06 Windows exe](http://fileadmin.cs.lth.se/scala/KojoInstall-2.4.06.exe)  18MB
   * [Kojo 2.4.06 MacOSX dmg](http://fileadmin.cs.lth.se/kojo/Kojo-2.4.06.app.dmg) 39MB
-  * [Part of "Scala for the impatient"] (http://fileadmin.cs.lth.se/scala/scala-impatient.pdf) 6MB, first 110 pages Copyright Cay S. Horstmann 2012.
-
-## Preparations before coding along:
-
-  * Download latest Scala using http://scala-lang.org/download/ or above mirrors
-  * Open a terminal window (bash | powershell | cmd)
-  * Run the `scala` command
-  * Type or paste these [code snippets](https://github.com/bjornregnell/scala-code-along/blob/master/scala-code-along-intro.scala) line by line as we code along together 
-
+  * [Part of "Scala for the impatient"] (http://fileadmin.cs.lth.se/scala/scala-impatient.pdf) 6MB, first 110 pages Copyright Cay S. Horstmann 2012.  
+  
 ## What is Scala?
 
   * Scala is a statically typed object-functional language 
