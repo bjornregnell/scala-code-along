@@ -7,7 +7,7 @@ by typing/pasting code snippets into the Scala interactive shell, also known as 
 
 ## Preparations before coding along:
 
-  * Download latest Scala using http://scala-lang.org/download/ or mirrors provided [below](https://github.com/bjornregnell/scala-code-along#scala-download-mirrors-at-cslthse) by LTH in Lund, Sweden.
+  * Download latest Scala using http://scala-lang.org/download/ or mirrors provided [below](https://github.com/bjornregnell/scala-code-along#scala-download-mirrors-at-cslthse) by LTH, Lund University in Sweden.
   * Open a terminal window (bash | powershell | cmd)
   * Run the `scala` command
   * Type or paste these [code snippets](https://github.com/bjornregnell/scala-code-along/blob/master/scala-code-along-intro.scala) line by line as we code along together 
@@ -29,8 +29,8 @@ by typing/pasting code snippets into the Scala interactive shell, also known as 
   
 ## What is Scala?
 
-  * Scala is a statically typed object-functional language 
-  * Scala runs on the Java Virtual Machine 
+  * Scala is a statically typed object-functional programming language 
+  * Scala runs as fast as Java on the Java Virtual Machine 
   * Scala can call any Java byte code, including all classes in the JDK
   * Scala's standard library includes a powerful collections library
   * Scala has more powerful abstraction mechanisms compared to Java
