@@ -24,15 +24,17 @@
 //hello world in the REPL (Read Evaluate Print Loop)
 println("hello world")
 
-//a separately compiled application in file hello.scala: compile with scalac hello.scala 
+//a separately compiled application in file hello.scala: 
+//  compile with  scalac hello.scala 
+//  run with      scala Hello
 object Hello extends App {
   println("hello world")
 }
 
 //you can also do it the more verbose java-similar way if you want
-object Hello {
+object HelloVerbose {
   def main(args: Array[String]): Unit = {
-    println("hello world")
+    println("hello world again")
   }
 }
 
@@ -113,7 +115,7 @@ val capitol = Map("Sweden" -> "Stockholm", "Denmark" -> "Copenhagen", "Skåne" -
 
 //create a variable reference to an immutable collection
 var ourList = List("rainbow")
-ourlist = ourlist + "rainbow"
+ourList = ourList + "rainbow"
 if (ourList(0) == ourList(1) && ourList(0) == "rainbow") println("Double rainbow")
 
 //map inc over all elements and make a new Vector
