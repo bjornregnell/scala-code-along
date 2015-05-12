@@ -29,9 +29,9 @@ by typing/pasting code snippets into the Scala interactive shell, also known as 
   
   * Download SimpleWindow etc. in [cs_eda016.jar](http://fileadmin.cs.lth.se/scala/cs_eda016.jar) 51kB and [JavaDoc for cs_eda016](http://fileadmin.cs.lth.se/cs//Education/EDA016/javadoc/cs_eda016_doc/) to test Java interoperability:
     * put the jar on the REPL's class path with `scala -cp cs_eda016.jar` 
-    * or if you have compiled some `object Main extends App` that ``import se.lth.cs.window.SimpleWindow`, run class file Main.class using:
-      * Windows: `scala -cp "cs_eda016.jar;." Main`
-      * Linux: `scala -cp "cs_eda016.jar:." Main`
+    * or if you have compiled some `object Main extends App` that `import se.lth.cs.window.SimpleWindow`, run your class file Main.class using:
+      * Windows: `scala -cp "cs_eda016.jar;." Main` note the quotes, semicolon and dot
+      * Linux: `scala -cp "cs_eda016.jar:." Main` note the quotes, colon and dot
   
 ## What is [Scala](http://scala-lang.org/)?
 
