@@ -1,6 +1,6 @@
 # scala-code-along
 
-A short intro to [Scala](http://scala-lang.org/). 
+A short intro to [Scala](https://github.com/bjornregnell/scala-code-along#what-is-scala). 
 
 The provided code is ment as inspiration for interactive live coding sessions lead by someone who wants to share the joy of Scala. We [code-along](https://github.com/bjornregnell/scala-code-along/blob/master/scala-code-along-intro.scala) together step-by-step
 by typing/pasting code snippets into the Scala interactive shell, also known as the Scala [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
@@ -27,7 +27,13 @@ by typing/pasting code snippets into the Scala interactive shell, also known as 
   * Recommended reading for java programmers:
     * [Part of "Scala for the impatient"] (http://fileadmin.cs.lth.se/scala/scala-impatient.pdf) 6MB, first 110 pages Copyright [Cay S. Horstmann 2012](http://www.horstmann.com/scala/index.html).  
   
-## What is Scala?
+  * Download SimpleWindow etc. in [cs_eda016.jar](http://fileadmin.cs.lth.se/scala/cs_eda016.jar) 51kB and [JavaDoc for cs_eda016](http://fileadmin.cs.lth.se/cs//Education/EDA016/javadoc/cs_eda016_doc/) to test Java interoperability:
+    * put the jar on the REPL's class path with `scala -cp cs_eda016.jar` 
+    * or if you have compiled some `object Main extends App` that ``import se.lth.cs.window.SimpleWindow`, run class file Main.class using:
+      * Windows: `scala -cp "cs_eda016.jar;." Main`
+      * Linux: `scala -cp "cs_eda016.jar:." Main`
+  
+## What is [Scala](http://scala-lang.org/)?
 
   * Scala is a statically typed object-functional programming language 
   * Scala runs as fast as Java on the Java Virtual Machine 
