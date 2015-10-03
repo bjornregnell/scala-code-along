@@ -27,15 +27,8 @@ println("hello world")
 //a separately compiled application in file hello.scala: 
 //  compile with  scalac hello.scala 
 //  run with      scala Hello
-object Hello extends App {
-  println("hello world")
-}
-
-//you can also do it the more verbose java-similar way if you want
-object HelloVerbose {
-  def main(args: Array[String]): Unit = {
-    println("hello world again")
-  }
+object Hello extends App { 
+  println("hello world") 
 }
 
 //Scala is more regular; all values are objects (no special "primitive types" as in Java)
@@ -157,7 +150,7 @@ import obj._
 dec(43)
 
 //functions are objects (!) with apply method(s)
-object inc2 { def apply(x: Int) = x + 1}
+object inc2 { def apply(x: Int) = x + 1 }
 inc2.apply(41)
 inc2(41)  //the complier injects the .apply method call 
 
@@ -169,7 +162,7 @@ inc2 apply 41  //operator notation on object inc2
 //declare a class with a primary constructor with class parameter
 class Banana(gram: Int) {
   val color = "yellow"       //an immutable attribute
-  var pricePerKilo = 10      //a mutable attribute
+  var pricePerKilo = 10      //a mutable attribute 
   def kilo = gram / 1000.0   //a method
   def price = kilo * pricePerKilo  //another method
 }
@@ -197,13 +190,22 @@ b2.gram
 b2.kilo
 
 //create a companion object with an apply factory method using :paste in REPL
-class Banana(val gram: Int) extends Fruit {
-  override def toString = s"Banana($kilo) // in kilograms"
-}
-object Banana { //the same name as the class name and in the same code file
-  def apply(kilo: Double) = new Banana((kilo*1000).toInt)
-}
+//  :paste or :pa for short enters paste mode and you can paste many lines and end by pressing ctrl+D
+//  a companion object can access private parts of the companion's class
+  class Banana(val gram: Int) extends Fruit {
+    private var secret = 42
+    override def toString = s"Banana($kilo) // in kilograms"
+  }
+  object Banana { //the same name as the class name
+    def apply(kilo: Double) = new Banana((kilo*1000).toInt)
+    def showSecret = "The secret is " + apply(42.0).secret
+  }
 
+//test the toString and access rules of the Banana companion object
+Banana(42.0) 
+Banana.showSecret 
+Banana(42.0).secret
+  
 //use our apply method (often used instead of multiple constructors)
 val b3 = Banana(0.333333)
 
